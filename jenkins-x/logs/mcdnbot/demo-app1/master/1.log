@@ -1,0 +1,135 @@
+Step: build-step-credential-initializer-z4647:
+
+{"level":"warn","ts":1556139622.6956367,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1556139622.699355,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-*******-demo-app1-master-66vs5:
+
+{"level":"warn","ts":1556139625.1583145,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1556139626.2959628,"logger":"fallback-logger","caller":"git-init/main.go:99","msg":"Successfully cloned \"https://github.com/*******/demo-app1\" @ \"v0.0.1\" in path \"/workspace/source\""}
+Step: build-step-place-tools:
+
+Step: build-step-git-merge:
+
+Warning failed to load version: failed to parse version -dev+9e73adc0b: No Major.Minor.Patch elements found
+time="2019-04-24T21:01:44Z" level=info msg="got "
+Using SHAs from PULL_REFS=master:
+time="2019-04-24T21:01:44Z" level=warning msg="no SHAs to merge, falling back to initial cloned commit"
+Step: build-step-setup-**-git-credentials:
+
+Generated Git credentials file /workspace/xdg_config/git/credentials
+Step: build-step-build-python-unittest:
+
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+Step: build-step-build-container-build:
+
+[36mINFO[0m[0000] Downloading base image python:3.6-alpine     
+ERROR: logging before flag.Parse: E0424 21:02:02.575372       9 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0424 21:02:02.579470       9 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2019/04/24 21:02:02 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:6a6670ac562acd9d185fab6b768dbe72bf304ed2c2b79772eca0662da90fb4c8: no such file or directory 
+[36mINFO[0m[0001] Downloading base image python:3.6-alpine     
+2019/04/24 21:02:03 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0002] Checking for cached layer 10.19.242.226:5000/mcdn-test/cache:342cee2929779d1c27c0cd8ee2bb3004814858eb5d6b62b3e9b1ceb38aad6ec6... 
+2019/04/24 21:02:04 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] No cached layer found for cmd RUN pip install -r /requirements.txt 
+[36mINFO[0m[0002] Unpacking rootfs as cmd RUN pip install -r /requirements.txt requires it. 
+[36mINFO[0m[0004] Taking snapshot of full filesystem...        
+[36mINFO[0m[0005] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0005] COPY requirements.txt /                      
+[36mINFO[0m[0005] Taking snapshot of files...                  
+[36mINFO[0m[0005] RUN pip install -r /requirements.txt         
+[36mINFO[0m[0005] cmd: /bin/sh                                 
+[36mINFO[0m[0005] args: [-c pip install -r /requirements.txt]  
+Collecting flask==1.0.2 (from -r /requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/7f/e7/08578774ed4536d3242b14dacb4696386634607af824ea997202cd0edb4b/Flask-1.0.2-py2.py3-none-any.whl (91kB)
+Collecting itsdangerous>=0.24 (from flask==1.0.2->-r /requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/76/ae/44b03b253d6fade317f32c24d100b3b35c2239807046a4c953c7b89fa49e/itsdangerous-1.1.0-py2.py3-none-any.whl
+Collecting click>=5.1 (from flask==1.0.2->-r /requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/fa/37/45185cb5abbc30d7257104c434fe0b07e5a195a6847506c074527aa599ec/Click-7.0-py2.py3-none-any.whl (81kB)
+Collecting Jinja2>=2.10 (from flask==1.0.2->-r /requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/1d/e7/fd8b501e7a6dfe492a433deb7b9d833d39ca74916fa8bc63dd1a4947a671/Jinja2-2.10.1-py2.py3-none-any.whl (124kB)
+Collecting Werkzeug>=0.14 (from flask==1.0.2->-r /requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/18/79/84f02539cc181cdbf5ff5a41b9f52cae870b6f632767e43ba6ac70132e92/Werkzeug-0.15.2-py2.py3-none-any.whl (328kB)
+Collecting MarkupSafe>=0.23 (from Jinja2>=2.10->flask==1.0.2->-r /requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/b9/2e/64db92e53b86efccfaea71321f597fa2e1b2bd3853d8ce658568f7a13094/MarkupSafe-1.1.1.tar.gz
+Building wheels for collected packages: MarkupSafe
+  Building wheel for MarkupSafe (setup.py): started
+  Building wheel for MarkupSafe (setup.py): finished with status 'done'
+  Stored in directory: /root/.cache/pip/wheels/f2/aa/04/0edf07a1b8a5f5f1aed7580fffb69ce8972edc16a505916a77
+Successfully built MarkupSafe
+Installing collected packages: itsdangerous, click, MarkupSafe, Jinja2, Werkzeug, flask
+Successfully installed Jinja2-2.10.1 MarkupSafe-1.1.1 Werkzeug-0.15.2 click-7.0 flask-1.0.2 itsdangerous-1.1.0
+You are using pip version 19.0.3, however version 19.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+[36mINFO[0m[0009] Taking snapshot of full filesystem...        
+[36mINFO[0m[0010] Using files from context: [/workspace/source/templates] 
+[36mINFO[0m[0010] COPY ./templates /app/templates              
+[36mINFO[0m[0010] Taking snapshot of files...                  
+[36mINFO[0m[0010] Using files from context: [/workspace/source/app.py] 
+[36mINFO[0m[0010] Pushing layer 10.19.242.226:5000/mcdn-test/cache:342cee2929779d1c27c0cd8ee2bb3004814858eb5d6b62b3e9b1ceb38aad6ec6 to cache now 
+[36mINFO[0m[0010] COPY app.py /app                             
+[36mINFO[0m[0010] Taking snapshot of files...                  
+[36mINFO[0m[0010] WORKDIR /app                                 
+[36mINFO[0m[0010] cmd: workdir                                 
+[36mINFO[0m[0010] Changed working directory to /app            
+[36mINFO[0m[0010] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0010] EXPOSE 8080                                  
+[36mINFO[0m[0010] cmd: EXPOSE                                  
+[36mINFO[0m[0010] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0010] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0010] CMD ["python", "app.py"]                     
+[36mINFO[0m[0010] No files changed in this command, skipping snapshotting. 
+2019/04/24 21:02:13 pushed blob: sha256:590049341869bd91d2ab9b28e82625f35cad5edc7f1bd01fb2196de428d4ee82
+2019/04/24 21:02:13 pushed blob: sha256:f3fd10b9161973040a5b42ebd53a3c1151e0f0f39c5497066dfdad9beae0436e
+2019/04/24 21:02:13 10.19.242.226:5000/mcdn-test/cache:342cee2929779d1c27c0cd8ee2bb3004814858eb5d6b62b3e9b1ceb38aad6ec6: digest: sha256:29f8d7d5e6d9707a6944991625478ff0a85b66db70f4944658a14afc8c3f9bad size: 428
+2019/04/24 21:02:13 pushed blob: sha256:40bc81f6feb0de1d9e621006a3a593a2ac76086ffbc07a14b969d4c17a10b812
+2019/04/24 21:02:13 pushed blob: sha256:60eccd6cab2284ab8cfcf7d4c84eaf99ff6ceff47f9044d8f294f7c36f631cca
+2019/04/24 21:02:13 pushed blob: sha256:bd76360ac563620c30d7799cd43506e1918fba4f4ce4ad170e192de1dbdb17d1
+2019/04/24 21:02:13 pushed blob: sha256:f7e74a6a6406bc540029a1dbf566c1fafc8b65b586bab89c750ef9d1efda7233
+2019/04/24 21:02:13 pushed blob: sha256:bdf0201b3a056acc4d6062cc88cd8a4ad5979983bfb640f15a145e09ed985f92
+2019/04/24 21:02:13 pushed blob: sha256:3a45eb710779742d5788647b8e4f1046ec0e476796532d93838d38a7b72afa14
+2019/04/24 21:02:14 pushed blob: sha256:ace61d116e3553501b7634bb61fdc0255622cf3d6599ff919262adba63776bd3
+2019/04/24 21:02:14 pushed blob: sha256:59c926705abfce33273837742a03ad5b0208430695d4364f4b6b4629a5d720de
+2019/04/24 21:02:14 pushed blob: sha256:f3fd10b9161973040a5b42ebd53a3c1151e0f0f39c5497066dfdad9beae0436e
+2019/04/24 21:02:14 pushed blob: sha256:dd4853571cc7e489db8127107442851f2a6e314ec812a1020fe15418919fed18
+2019/04/24 21:02:14 10.19.242.226:5000/*******/demo-app1:0.0.1: digest: sha256:c2fecb1e2843f713482b2943852134dcff32064f7a88ff48055f1414cd8d946c size: 1724
+Step: build-step-build-post-build:
+
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+Step: build-step-promote-changelog:
+
+Converted /workspace/source/charts/demo-app1 to an unshallow repository
+Generating change log from git ref d3063e3516e0d358b8bd080c2302a72906052a09 => aafe882ee7b71d2b6521b3380fd1ec6ef7e1d4df
+WARNING: Failed to enrich commits with issues: User.jenkins.io "" is invalid: metadata.name: Required value: name or generateName is required
+WARNING: Failed to enrich commits with issues: User.jenkins.io "" is invalid: metadata.name: Required value: name or generateName is required
+Finding issues in commit messages using git format
+WARNING: No release found for *******/demo-app1 and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/*******/demo-app1/releases/tag/v0.0.1
+generated: /workspace/source/charts/demo-app1/templates/release.yaml
+Created Release demo-app1-0-0-1 resource in namespace **
+Updating PipelineActivity *******-demo-app1-master-1 with version 0.0.1
+Updated PipelineActivities *******-demo-app1-master-1 with release notes URL: https://github.com/*******/demo-app1/releases/tag/v0.0.1
+Step: build-step-promote-helm-release:
+
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file demo-app1-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+Step: build-step-promote-**-promote:
+
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+Promoting app demo-app1 version 0.0.1 to namespace **-staging
+Created Pull Request: https://github.com/*******/environment-frillabalone-staging/pull/1
+
+Pull Request https://github.com/*******/environment-frillabalone-staging/pull/1 is merged at sha 4c830e31aec14cd7f566894b1a7b9e1dcc45fb08
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names demo-app1, **-demo-app1, **-staging-demo-app1
