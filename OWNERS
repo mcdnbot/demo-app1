@@ -1,4 +1,6 @@
 approvers:
 - mcdnbot
+- mcdnapprover
 reviewers:
 - mcdnbot
+- mcdnapprover
